@@ -1,16 +1,16 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
+    "name": "spatie/UnitConversions-LaravelPackageDev",
+    "description": "",
     "keywords": [
         "spatie",
-        ":package_name"
+        "UnitConversions-LaravelPackageDev"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/spatie/UnitConversions-LaravelPackageDev",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "ElijahCoding",
+            "email": "cuiyeqing960904@gmail.com",
             "homepage": "https://spatie.be",
             "role": "Developer"
         }
