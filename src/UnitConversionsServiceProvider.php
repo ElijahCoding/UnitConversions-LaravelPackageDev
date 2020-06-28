@@ -5,7 +5,7 @@ namespace Spatie\UnitConversions;
 use Illuminate\Support\ServiceProvider;
 use Spatie\UnitConversions\Commands\SkeletonCommand;
 
-class SkeletonServiceProvider extends ServiceProvider
+class UnitConversionsServiceProvider extends ServiceProvider
 {
     public function boot()
     {

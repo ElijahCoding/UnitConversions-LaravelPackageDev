@@ -3,7 +3,7 @@
 namespace Spatie\UnitConversions\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Spatie\UnitConversions\SkeletonServiceProvider;
+use Spatie\UnitConversions\UnitConversionsServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -17,7 +17,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            SkeletonServiceProvider::class,
+            UnitConversionsServiceProvider::class,
         ];
     }
 
