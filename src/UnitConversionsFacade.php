@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @see \Spatie\UnitConversions\Weight
  */
-class SkeletonFacade extends Facade
+class UnitConversionsFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {

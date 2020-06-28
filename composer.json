@@ -51,7 +51,7 @@
                 "UnitConversionsServiceProvider"
             ],
             "aliases": {
-                "UnitConversions": "Spatie\\UnitConversions\\SkeletonFacade"
+                "UnitConversions": "UnitConversionsFacade"
             }
         }
     },
