@@ -8,6 +8,6 @@ class MyPackageController
 {
     public function index()
     {
-        return 'ok';
+        return view('skeleton::subDirectory.index');
     }
 }

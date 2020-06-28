@@ -2,8 +2,10 @@
 
 namespace Spatie\UnitConversions;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Spatie\UnitConversions\Commands\SkeletonCommand;
+use Spatie\UnitConversions\Http\Controllers\MyPackageController;
 
 class UnitConversionsServiceProvider extends ServiceProvider
 {
@@ -11,14 +13,14 @@ class UnitConversionsServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/skeleton.php' => config_path('skeleton.php'),
+                __DIR__ . '/../config/skeleton.php' => config_path('skeleton.php'),
             ], 'config');
 
             $this->publishes([
-                __DIR__.'/../resources/views' => base_path('resources/views/vendor/skeleton'),
+                __DIR__ . '/../resources/views' => base_path('resources/views/vendor/skeleton'),
             ], 'views');
 
-            if (! class_exists('CreatePackageTable')) {
+            if (!class_exists('CreatePackageTable')) {
                 $this->publishes([
                     __DIR__ . '/../database/migrations/create_skeleton_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_skeleton_table.php'),
                 ], 'migrations');
@@ -29,11 +31,17 @@ class UnitConversionsServiceProvider extends ServiceProvider
             ]);
         }
 
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'skeleton');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'skeleton');
+
+        Route::macro('skeleton', function (string $prefix) {
+            Route::prefix($prefix)->group(function () {
+                Route::get('/', [MyPackageController::class, 'index']);
+            });
+        });
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/skeleton.php', 'skeleton');
+        $this->mergeConfigFrom(__DIR__ . '/../config/skeleton.php', 'skeleton');
     }
 }

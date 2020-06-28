@@ -2,6 +2,7 @@
 
 namespace Spatie\UnitConversions\Tests;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Spatie\UnitConversions\UnitConversionsServiceProvider;
@@ -11,6 +12,8 @@ class TestCase extends Orchestra
     public function setUp(): void
     {
         parent::setUp();
+
+        Route::skeleton('my-package-routes');
 
         $this->withFactories(__DIR__.'/database/factories');
     }
