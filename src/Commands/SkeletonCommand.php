@@ -12,6 +12,8 @@ class SkeletonCommand extends Command
 
     public function handle()
     {
-        $this->comment('All done');
+        $outputText = config('skeleton.command_output_text');
+
+        $this->comment($outputText);
     }
 }
