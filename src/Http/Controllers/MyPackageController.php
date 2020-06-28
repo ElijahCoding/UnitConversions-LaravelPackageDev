@@ -3,7 +3,6 @@
 
 namespace Spatie\UnitConversions\Http\Controllers;
 
-
 class MyPackageController
 {
     public function index()

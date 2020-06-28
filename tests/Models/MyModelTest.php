@@ -2,7 +2,6 @@
 
 namespace Spatie\UnitConversions\Tests\Models;
 
-use Illuminate\Support\Facades\DB;
 use Spatie\UnitConversions\Models\MyModel;
 use Spatie\UnitConversions\Tests\TestCase;
 
