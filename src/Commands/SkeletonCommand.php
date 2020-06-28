@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace Spatie\UnitConversions\Commands;
 
 use Illuminate\Console\Command;
 

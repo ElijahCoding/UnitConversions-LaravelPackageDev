@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Skeleton;
+namespace Spatie\UnitConversions;
 
 use Illuminate\Support\ServiceProvider;
-use Spatie\Skeleton\Commands\SkeletonCommand;
+use Spatie\UnitConversions\Commands\SkeletonCommand;
 
 class SkeletonServiceProvider extends ServiceProvider
 {
