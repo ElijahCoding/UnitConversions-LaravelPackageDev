@@ -18,13 +18,4 @@ class MyModelTest extends TestCase
 
         $this->assertEquals('JOHN', $model->getUpperCasedName());
     }
-
-    public function test_it_can_use_json_queries()
-    {
-        $models = DB::table('my_models')
-            ->whereJsonContains('options->languages', 'en')
-            ->get();
-
-        $this->assertCount(0, $models);
-    }
 }
